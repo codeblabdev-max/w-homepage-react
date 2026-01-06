@@ -1,7 +1,7 @@
 # Vite React Production Dockerfile
 # Multi-stage build for optimized image size
 
-FROM node:20-alpine AS builder
+FROM docker.io/library/node:20-alpine AS builder
 WORKDIR /app
 
 COPY package.json package-lock.json* ./
@@ -11,7 +11,7 @@ COPY . .
 RUN npm run build
 
 # Production with nginx
-FROM nginx:alpine AS runner
+FROM docker.io/library/nginx:alpine AS runner
 
 # Copy built assets
 COPY --from=builder /app/dist /usr/share/nginx/html
