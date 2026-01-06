@@ -142,8 +142,8 @@ jobs:
             echo "url=w-homepage-react.codeb.kr" >> $GITHUB_OUTPUT
           else
             echo "container_name=w-homepage-react-staging" >> $GITHUB_OUTPUT
-            echo "port=3002" >> $GITHUB_OUTPUT
-            echo "url=w-homepage-react-staging.codeb.kr" >> $GITHUB_OUTPUT
+            echo "port=4501" >> $GITHUB_OUTPUT
+            echo "url=staging-w-homepage.codeb.kr" >> $GITHUB_OUTPUT
           fi
 
       - name: Deploy via CodeB API
