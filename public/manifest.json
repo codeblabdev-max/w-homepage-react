@@ -1,0 +1,45 @@
+{
+  "name": "W. - from dots to lines",
+  "short_name": "W.",
+  "description": "아이디어부터 운영까지, 흩어진 점들을 하나의 경험으로 연결합니다. 웹/앱 개발, UI/UX 디자인, 브랜딩 서비스",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#0a0a0a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "ko",
+  "categories": ["business", "productivity"],
+  "icons": [
+    {
+      "src": "/img/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/img/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/img/preview.jpeg",
+      "sizes": "1200x630",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "W. 홈페이지 미리보기"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "문의하기",
+      "short_name": "문의",
+      "description": "프로젝트 문의하기",
+      "url": "/#contact",
+      "icons": [{ "src": "/img/favicon.png", "sizes": "96x96" }]
+    }
+  ]
+}
