@@ -608,6 +608,7 @@ export default function App() {
         <a href="#contact" className="mobile-menu__contact">문의하기</a>
       </div>
 
+      <main>
       {/* Hero Section */}
       <section className="hero">
         <video className="hero__video" autoPlay muted loop playsInline>
@@ -623,7 +624,7 @@ export default function App() {
       <section className="about">
         <div className="about__container">
           <div className="about__image card about-sticky-reveal">
-            <img src="/img/about.webp" alt="About Image" loading="lazy" />
+            <img src="/img/about.webp" alt="About Image" loading="lazy" width="600" height="400" />
           </div>
           <div className="about__content">
             <p className="about__text" data-highlight-words="">
@@ -649,7 +650,7 @@ export default function App() {
               <div className="strength__deck">
                 <div className="strength__card" data-index="0">
                   <div className="strength__media">
-                    <img src="/img/cost.webp" alt="투명한 비용" loading="lazy" />
+                    <img src="/img/cost.webp" alt="투명한 비용" loading="lazy" width="768" height="432" />
                   </div>
                   <div className="strength__card-inner">
                     <h3 className="strength__heading">투명한 비용</h3>
@@ -658,7 +659,7 @@ export default function App() {
                 </div>
                 <div className="strength__card" data-index="1">
                   <div className="strength__media">
-                    <img src="/img/schedule.webp" alt="빠른 일정" loading="lazy" />
+                    <img src="/img/schedule.webp" alt="빠른 일정" loading="lazy" width="768" height="432" />
                   </div>
                   <div className="strength__card-inner">
                     <h3 className="strength__heading">빠른 일정</h3>
@@ -667,7 +668,7 @@ export default function App() {
                 </div>
                 <div className="strength__card" data-index="2">
                   <div className="strength__media">
-                    <img src="/img/source.webp" alt="소스코드 이관" loading="lazy" />
+                    <img src="/img/source.webp" alt="소스코드 이관" loading="lazy" width="768" height="432" />
                   </div>
                   <div className="strength__card-inner">
                     <h3 className="strength__heading">소스코드 이관</h3>
@@ -814,7 +815,7 @@ export default function App() {
               { name: '분석/통계', img: '09' }
             ].map((module, i) => (
               <div className="advantages__card" key={i}>
-                <img src={`/img/module-${module.img}.webp`} alt={module.name} className="advantages__card-img" loading="lazy" />
+                <img src={`/img/module-${module.img}.webp`} alt={module.name} className="advantages__card-img" loading="lazy" width="300" height="200" />
                 <video src={`/img/module-${module.img}-hover.mp4`} className="advantages__card-video" muted playsInline></video>
               </div>
             ))}
@@ -910,6 +911,7 @@ export default function App() {
           </div>
         </div>
       </section>
+      </main>
 
       {/* Footer */}
       <footer className="footer">
