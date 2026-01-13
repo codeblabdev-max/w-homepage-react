@@ -1,0 +1,27 @@
+# w-homepage-react - Static Site Container
+# Environment: staging
+
+[Unit]
+Description=w-homepage-react Staging Container
+After=network-online.target
+
+[Container]
+Image=ghcr.io/codeblabdev-max/w-homepage-react:staging
+ContainerName=w-homepage-react-staging
+PublishPort=4501:3000
+Network=codeb-network
+
+HealthCmd=curl -sf http://localhost:3000/ || exit 1
+HealthInterval=30s
+HealthTimeout=5s
+HealthRetries=3
+HealthStartPeriod=10s
+PodmanArgs=--memory=256m --cpus=0.25
+
+[Service]
+Restart=always
+RestartSec=5s
+TimeoutStartSec=60
+
+[Install]
+WantedBy=multi-user.target default.target
