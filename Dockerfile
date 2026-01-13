@@ -4,8 +4,12 @@
 FROM docker.io/library/node:20-alpine AS builder
 WORKDIR /app
 
+ARG NPM_TOKEN
+RUN echo "@codeblabdev-max:registry=https://npm.pkg.github.com" > .npmrc && \
+    echo "//npm.pkg.github.com/:_authToken=${NPM_TOKEN}" >> .npmrc
+
 COPY package.json package-lock.json* ./
-RUN npm ci
+RUN npm ci && rm -f .npmrc
 
 COPY . .
 RUN npm run build

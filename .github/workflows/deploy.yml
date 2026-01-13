@@ -115,6 +115,7 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
+            NPM_TOKEN=${{ secrets.GHCR_PAT }}
             BUILDTIME=${{ github.event.head_commit.timestamp }}
             VERSION=${{ github.sha }}
             REVISION=${{ github.sha }}
